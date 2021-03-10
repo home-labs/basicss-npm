@@ -1,0 +1,40 @@
+@import 'mixins.styl'
+
+
+*
+  margin 0
+  padding 0
+  outline none
+
+  &[title]
+    title
+
+html
+  height 100%
+
+  body
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    text-align center
+    overflow-x hidden
+
+    img
+      vertical-align middle
+
+    main
+      // if width it's set
+      margin auto
+      text-align left
+
+      aside
+        display inline-block
+        vertical-align top
+
+      h3
+        text-align center
+
+    header, nav, main, aside
+      text-align left
