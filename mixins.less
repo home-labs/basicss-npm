@@ -1,0 +1,28 @@
+.text-overflow() {
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.title() {
+
+  &[title]
+    &:after {
+      position: absolute;
+      z-index: 1;
+      white-space: nowrap;
+      display: none;
+      text-transform: initial;
+    }
+
+  &:hover
+    &[title] {
+      &:after {
+        display: block !important;
+      }
+    }
+
+}
+
+.base64-icon(@hash) {
+  background: url("data:image/svg+xml;utf8;base64,@{hash}") no-repeat
+}
