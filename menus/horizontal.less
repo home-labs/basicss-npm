@@ -1,68 +1,70 @@
 nav {
 
-    &.horizontal-menu
+    &.horizontal-menu {
 
-        ul
+        ul {
 
-        > li {
-            display: table-cell;
-            vertical-align: middle;
-        }
-
-        li {
-            text-align: center;
-            margin-left: -1px;
-            position: relative;
-
-            &:hover {
-                cursor: default;
-
-                // >: combina com somente o primeiro elemento na árvore do dom, isto é, não combina recursivamente
-                // o ul não pode ter overflow-x pois suprimirá os uls filhos
-                > ul {
-                    display: block;
-                }
+            > li {
+                display: table-cell;
+                vertical-align: middle;
             }
 
-            ul {
-                display: none;
-                position: absolute;
-                z-index: 1;
-                left: 0;
-                margin-left: -3px;
-                width: 98%;
-                top: 100%;
+            li {
+                text-align: center;
+                margin-left: -1px;
+                position: relative;
 
-                li {
-                    width: 100%;
-                    display: block;
-                    height: initial !important;
+                &:hover {
+                    cursor: default;
 
-                    &:first-of-type {
-                        border-top: transparent !important;
+                    // >: combina com somente o primeiro elemento na árvore do dom, isto é, não combina recursivamente
+                    // o ul não pode ter overflow-x pois suprimirá os uls filhos
+                    > ul {
+                        display: block;
                     }
+                }
 
-                    &:hover
-                        ul {
-                            display: inline-block;
+                ul {
+                    display: none;
+                    position: absolute;
+                    z-index: 1;
+                    left: 0;
+                    margin-left: -3px;
+                    width: 98%;
+                    top: 100%;
+
+                    li {
+                        width: 100%;
+                        display: block;
+                        height: initial !important;
+
+                        &:first-of-type {
+                            border-top: transparent !important;
                         }
 
-                    ul {
-                        top: 0;
-                        left: 100%;
-                        margin-left: initial;
+                        &:hover
+                            ul {
+                                display: inline-block;
+                            }
 
-                        li
-                            &:first-of-type {
+                        ul {
+                            top: 0;
+                            left: 100%;
+                            margin-left: initial;
 
-                                background: transparent !important;
+                            li
+                                &:first-of-type {
 
-                                &:hover {
-                                    // para se haver efetividade caso haja um efeito no li ao se passar o mouse
-                                    background: initial !important;
+                                    background: transparent !important;
+
+                                    &:hover {
+                                        // para se haver efetividade caso haja um efeito no li ao se passar o mouse
+                                        background: initial !important;
+                                    }
+
                                 }
 
-                            }
+                        }
 
                     }
 
@@ -71,5 +73,7 @@ nav {
             }
 
         }
+
+    }
 
 }

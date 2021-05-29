@@ -1,4 +1,4 @@
-table{
+table {
 
     border-collapse: collapse;
     margin: auto !important;
@@ -11,7 +11,7 @@ table{
     tbody {
         overflow: auto;
 
-        tr
+        tr {
 
             td {
                 text-align: center;
@@ -20,6 +20,7 @@ table{
                     text-align: initial;
                 }
             }
+        }
     }
 
     thead, tbody {
@@ -39,18 +40,21 @@ table{
 
         }
 
-        &.scrollable-body
+        &.scrollable-body{
 
             tbody {
                 display: block;
             }
 
-            thead, tbody
+            thead, tbody {
                 tr {
                     width: 100%;
                     table-layout: fixed;
                     display: inline-table;
                 }
+            }
+        }
+
     }
 
 }
